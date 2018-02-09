@@ -1,0 +1,5 @@
+language: objective-c
+xcode_project: SwiftPromise/SwiftPromise.xcodeproj
+xcode_scheme: SwiftPromise
+osx_image: xcode9.2
+script: ./test

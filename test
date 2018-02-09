@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+xcodebuild test -scheme SwiftPromise
+
