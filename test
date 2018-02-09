@@ -1,4 +1,4 @@
 #!/bin/bash
 
 set -e
-xcodebuild test -scheme SwiftPromise
+xcodebuild test -project SwiftPromise/SwiftPromise.xcodeproj -scheme SwiftPromise -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0'
