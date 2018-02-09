@@ -10,6 +10,7 @@
 		B3C8AA31202DDBD2009AFFFE /* SwiftPromise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C8AA27202DDBD1009AFFFE /* SwiftPromise.framework */; };
 		B3C8AA36202DDBD2009AFFFE /* SwiftPromiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C8AA35202DDBD2009AFFFE /* SwiftPromiseTests.swift */; };
 		B3C8AA38202DDBD2009AFFFE /* SwiftPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = B3C8AA2A202DDBD1009AFFFE /* SwiftPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3C8AA42202DDD57009AFFFE /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C8AA41202DDD57009AFFFE /* Promise.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		B3C8AA30202DDBD2009AFFFE /* SwiftPromiseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPromiseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C8AA35202DDBD2009AFFFE /* SwiftPromiseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPromiseTests.swift; sourceTree = "<group>"; };
 		B3C8AA37202DDBD2009AFFFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3C8AA41202DDD57009AFFFE /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				B3C8AA2A202DDBD1009AFFFE /* SwiftPromise.h */,
 				B3C8AA2B202DDBD1009AFFFE /* Info.plist */,
+				B3C8AA41202DDD57009AFFFE /* Promise.swift */,
 			);
 			path = SwiftPromise;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					B3C8AA26202DDBD1009AFFFE = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					B3C8AA2F202DDBD2009AFFFE = {
@@ -196,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C8AA42202DDD57009AFFFE /* Promise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +339,8 @@
 		B3C8AA3C202DDBD2009AFFFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -347,6 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rolandoasmat.SwiftPromise;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +363,8 @@
 		B3C8AA3D202DDBD2009AFFFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -376,6 +386,7 @@
 		B3C8AA3F202DDBD2009AFFFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J7SJPB755M;
 				INFOPLIST_FILE = SwiftPromiseTests/Info.plist;
@@ -390,6 +401,7 @@
 		B3C8AA40202DDBD2009AFFFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J7SJPB755M;
 				INFOPLIST_FILE = SwiftPromiseTests/Info.plist;
