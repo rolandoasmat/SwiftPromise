@@ -2,11 +2,11 @@
 
 # SwiftPromise
 
-Use the Promise pattern in Swift.
+Use this library to create a thenable Promise.
 
 ## Usage
 
-Create the promise, specifying `Double` as the fulfillment object type.
+Create the promise
 ```swift
 // Init
 let promise = Promise<Double>() { fulfill, reject in
@@ -16,7 +16,7 @@ let promise = Promise<Double>() { fulfill, reject in
 }
 ```
 
-Do something with the promoise after it's settled.
+Respond to error or result
 ```swift
 promise.then({ (result) in
     print("Got the result!\n\(result)")
@@ -30,7 +30,7 @@ promise.then({ (result) in
 
 ### CocoaPods
 
-Include `SwiftPromise` in your `Podfile`:
+Include `SwiftPromise` in your `Podfile`
 
 ```ruby
 platform :ios, '9.0'
@@ -41,7 +41,7 @@ target 'SampleApp' do
 end
 ```
 
-Then, install:
+Then, install
 
 ```bash
 $ pod install
