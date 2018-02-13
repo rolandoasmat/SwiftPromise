@@ -22,7 +22,6 @@ import Foundation
 
 /// A basic, easy to use, Promise.
 public class Promise<T> {
-    typealias EmptyClosure = () -> Void
     
     /// Closure with 2 closures as input, one to fulfill the promise and the other to reject it.
     public typealias PromiseCallback = (Fulfill, Reject) -> Void
