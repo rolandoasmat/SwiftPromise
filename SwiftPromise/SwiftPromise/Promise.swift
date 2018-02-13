@@ -21,17 +21,17 @@
 import Foundation
 
 /// A basic, easy to use, Promise.
-class Promise<T> {
+public class Promise<T> {
     typealias EmptyClosure = () -> Void
     
     /// Closure with 2 closures as input, one to fulfill the promise and the other to reject it.
-    typealias PromiseCallback = (Fulfill, Reject) -> Void
+    public typealias PromiseCallback = (Fulfill, Reject) -> Void
     
     /// Closure that fulfills the promise, pass in result <T> to fulfill.
-    typealias Fulfill = (T) -> Void
+    public typealias Fulfill = (T) -> Void
     
     /// Closure that rejects the promise, pass an error to reject.
-    typealias Reject = (Error) -> Void
+    public typealias Reject = (Error) -> Void
     
     private var callback: PromiseCallback
     private var settled: Bool = false
@@ -53,7 +53,7 @@ class Promise<T> {
      
      - parameter callback: The Promise Callback closure, fulfill or reject the promise here.
      */
-    init(_ callback: @escaping PromiseCallback) {
+    public init(_ callback: @escaping PromiseCallback) {
         self.callback = callback
     }
     
@@ -63,7 +63,7 @@ class Promise<T> {
      - parameter fulfill: Fulfill closure, do something with the result.
      - parameter reject: Reject closure, do something with the error.
      */
-    func then(_ fulfill: @escaping Fulfill, _ reject: @escaping Reject) {
+    public func then(_ fulfill: @escaping Fulfill, _ reject: @escaping Reject) {
         let _fullfill: Fulfill = { result in
             if !self.settled {
                 fulfill(result)
